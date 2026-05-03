@@ -20,10 +20,10 @@ melbourne_rl_env/
 │
 └── environment/
     ├── prompt.md              ← What the LLM reads as its task
-    ├── broken_train.py        ← Deliberately buggy starter script (8 bugs)
+    ├── broken_train.py        ← Deliberately buggy starter script (7 bugs)
     ├── setup_data.py          ← Creates the hidden train/test split (run once)
     ├── setup_vm.sh            ← VM initialization script (run once, Linux only)
-    ├── judge.py               ← Automated 8-step judge (0.0 – 1.0)
+    ├── judge.py               ← Automated 7-step judge (0.0 – 1.0)
     ├── reference_solution.py  ← DO NOT show to LLM (for testing only)
     └── README.md              ← This file
 ```
@@ -113,7 +113,7 @@ cat model/judge_score.txt    # The reward score: 0.0 – 1.0
 | 5 | Uses `LinearRegression` on non-linear data | Wrong model class |
 | 6 | Test features not imputed before predict | Crash on NaN input |
 | 7 | Wrong column name: `predictions` not `PredictedPrice` | Judge format fail |
-| 8 | Data leakage trap shown as commented-out code | Subtle generalisation failure |
+| 8 | Data leakage trap for future development | Subtle generalisation failure |
 
 The reference solution using `RandomForestRegressor` achieves:
 - Validation R²: **0.8077**
