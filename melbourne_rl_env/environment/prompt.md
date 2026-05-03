@@ -99,5 +99,4 @@ cat /model/train.py               # Read the current broken script
 python /model/train.py            # Run it — observe errors and low R²
 nano /model/train.py              # Edit the file
 python /model/train.py            # Run again after your fixes
-# Repeat until R² on your validation set exceeds 0.72
 ```
